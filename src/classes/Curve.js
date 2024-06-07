@@ -1,4 +1,4 @@
-import Vec from "./Vector.js";
+import Vec from "../../Vector.js";
 
 class Curve {
   constructor(points) {

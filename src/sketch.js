@@ -1,5 +1,5 @@
 import Vec from "../Vector.js";
-import Curve from "../Curve.js";
+import Curve from "./classes/Curve.js";
 import { random } from "../util.js";
 import { spray } from "../brush.js";
 
