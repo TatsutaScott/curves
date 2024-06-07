@@ -1,6 +1,6 @@
 import Vec from "./Vector.js";
-import { random } from "./util.js";
-import { easing } from "./easing.js";
+import { random } from "../util/random_util.js";
+import { easing } from "../util/ease_util.js";
 
 const ease = random(easing);
 const ease2 = random(easing);
