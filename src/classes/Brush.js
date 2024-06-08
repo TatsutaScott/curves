@@ -14,9 +14,6 @@ function spray(ctx, p, r, n) {
 }
 
 function point(ctx, p, r) {
-  // const point = new Path2D();
-  // point.arc(p.x, p.y, r, 0, 360);
-  // ctx.fill(point);
   ctx.fillRect(p.x, p.y, r, r);
 }
 
