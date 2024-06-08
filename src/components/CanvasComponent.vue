@@ -31,6 +31,17 @@ watch(
   }
 )
 
+watch(
+  () => Control.value.isLooping,
+  () => {
+    if (Control.value.isLooping) {
+      systemWorker.postMessage({ method: 'stopLoop' })
+    } else {
+      systemWorker.postMessage({ method: 'startLoop' })
+    }
+  }
+)
+
 defineExpose({
   download: () => systemWorker.postMessage({ method: 'download' }),
   reset: () => systemWorker.postMessage({ method: 'reset' }),

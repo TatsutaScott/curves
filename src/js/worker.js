@@ -4,15 +4,6 @@ import Sketch from '@/js/classes/sketch.js'
 onmessage = (e) => workerMethods[e.data.method](e)
 
 const workerMethods = {}
-// setup: () => {
-//   console.log('hi')
-// },
-// startLoop: () => {},
-// stopLoop: () => {},
-// download: () => {},
-// setDimensions: () => {},
-// info: () => {},
-// updateParams: () => {}
 
 workerMethods.setup = function (e) {
   this.sketch = new Sketch(e.data.canvas, 600, 600)
@@ -22,4 +13,8 @@ workerMethods.setup = function (e) {
 
 workerMethods.startLoop = function () {
   requestAnimationFrame(this.sketch.draw())
+}
+
+workerMethods.stopLoop = function () {
+  cancelAnimationFrame(this.sketch.loop)
 }

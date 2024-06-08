@@ -1,5 +1,11 @@
 <template>
-  <div id="settings"></div>
+  <div id="settings">
+    <button @click="() => (Control.isLooping = !Control.isLooping)">
+      {{ Control.isLooping ? 'Start Loop' : 'Stop loop' }}
+    </button>
+  </div>
 </template>
 
-<script setup></script>
+<script setup>
+import Control from '@/js/stores/control'
+</script>
