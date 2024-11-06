@@ -14,12 +14,6 @@
       <div id="buttons">
         <Toggle on_text="show points" off_text="hide points" v-model="Control.showPoints"></Toggle>
         <Toggle on_text="start loop" off_text="stop loop" v-model="Control.isLooping"></Toggle>
-
-        <Button
-          @click="() => (Control.isLooping = !Control.isLooping)"
-          :text="Control.isLooping ? 'Start Loop' : 'Stop loop'"
-        >
-        </Button>
         <Button text="download" @click="emits('download')"></Button>
         <Button text="reset" @click="emits('reset')"></Button>
         <Button text="randomize" @click="emits('randomize')"></Button>

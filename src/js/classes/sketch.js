@@ -34,4 +34,8 @@ Sketch.prototype.sprayCurve = function (pts) {
   pts.forEach((p) => spray(this.ctx, p, 50, 10))
 }
 
+Sketch.prototype.erase = function () {
+  this.background('FloralWhite')
+}
+
 export default Sketch

@@ -26,6 +26,7 @@ defineEmits(['update:modelValue'])
 
 .button {
   @include util.border(1px, slategray, 5px);
+
   padding: 0.125rem 0.25rem;
   font-size: 10pt;
   cursor: pointer;

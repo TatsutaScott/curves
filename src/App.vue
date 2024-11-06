@@ -1,7 +1,11 @@
 <template>
   <h1>Curves</h1>
   <CanvasComp ref="curves_sketch" />
-  <SettingsComp ref="settings" />
+  <SettingsComp
+    @download="curves_sketch.download()"
+    @reset="curves_sketch.reset()"
+    ref="settings"
+  />
 </template>
 
 <script setup>
